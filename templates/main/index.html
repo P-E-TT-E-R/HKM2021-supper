@@ -1,0 +1,36 @@
+{% extends "include/base.html" %}
+
+{% block title %}Domov{% endblock %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<script>
+	var key = '{{ key }}';
+</script>
+<div id="stage1">
+	<div class="card">
+		<label for="address">Join url</label><br>
+		<input type="text" id="adress" name="address" placeholder="Generating..." value="{{ joinUrl }}"><br>
+		<button type="button" onclick="begin(key);">Begin <i class="bi bi-play"></i></button>
+		<!--
+			<input type="submit" name="multiple" value="Order for Team">-->
+	</div>
+	<div class="list-wrapper">
+		<h1>Joined users</h1>
+		<div class="list users">
+			<h3><i class="bi bi-person-circle"></i> You (host)</h3>
+			<h3><i class="bi bi-person-circle"></i> Janka</h3>
+			<h3><i class="bi bi-person-circle"></i> Jožo</h3>
+			<h3><i class="bi bi-person-circle"></i> Juraj</h3>
+			<h3><i class="bi bi-person-circle"></i> Jakarta lmao xddd</h3>
+		</div>
+	</div>
+</div>
+<div id="stage2">
+	<p>Stage2</p>
+</div>
+
+{% endblock content %}
+
+{% block javascript %}{% endblock javascript %}
