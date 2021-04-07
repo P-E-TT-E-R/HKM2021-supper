@@ -10,6 +10,12 @@ function begin(key) {
 	console.log(httpRequest('api/action/'+key+'?type=start'));
 	window.location.replace("order");
 }
+function updateUserlist(key) {
+    getElementById
+}
+function getInfo (key) {
+    return JSON.parse(httpRequest('api/info/'+key));
+}
 async function httpRequest(loc) {
     console.log("HTTP Request > http://"+window.location.host + '/' + loc);
     url = 'http://' + window.location.host + '/' + loc

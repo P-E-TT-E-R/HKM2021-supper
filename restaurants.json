@@ -1,0 +1,10 @@
+{
+  "Mc Donald's": {
+    "thumbnail_url": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg",
+    "food_origin": "\uD83C\uDDFA\uD83C\uDDF8American",
+    "stars": 3,
+    "vegan_options": true,
+    "delivery_time":30,
+    "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal.<br>\n\t\t\t\t<i class=\"bi bi-cup-straw\"></i>Drinks<br>"
+  }
+}

@@ -8,23 +8,66 @@
 <script>
 	var key = '{{ key }}';
 </script>
-<div id="stage1">
-	<div class="card">
-		<label>Waiting for host</label>
-	</div>
-	<div class="list-wrapper">
-		<h1>Joined users</h1>
-		<div class="list users">
-			<h3><i class="bi bi-person-circle"></i> You (host)</h3>
-			<h3><i class="bi bi-person-circle"></i> Janka</h3>
-			<h3><i class="bi bi-person-circle"></i> Jožo</h3>
-			<h3><i class="bi bi-person-circle"></i> Juraj</h3>
-			<h3><i class="bi bi-person-circle"></i> Jakarta lmao xddd</h3>
-		</div>
+
+<div class="card">
+	<label id="title">Waiting for host</label>
+</div>
+<div class="list-wrapper">
+	<h1>Joined users</h1>
+	<div id="list-users" class="list users">
+		<h3><i class="bi bi-person-circle"></i> You (host)</h3>
+		<h3><i class="bi bi-person-circle"></i> Janka</h3>
+		<h3><i class="bi bi-person-circle"></i> Jožo</h3>
+		<h3><i class="bi bi-person-circle"></i> Juraj</h3>
+		<h3><i class="bi bi-person-circle"></i> Jakarta lmao xddd</h3>
 	</div>
 </div>
-<div id="stage2">
-	<p>Stage2</p>
+<div class="list-wrapper">
+	<h1>Restaurants</h1>
+	<div id="list-restaurants" class="list restaurants">
+		<a href="#">
+		<img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg">
+		<div class="restaurants-info">
+			<h3>MC Donald's</h3>
+			<p>
+				<em class="badge bdg-blue">🇺🇸American</em><br>
+				<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i class="bi bi-star"></i><i class="bi bi-star"></i></em><br>
+				<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>
+				<i class="bi bi-chevron-double-up"></i>High Cal.<br>
+				<i class="bi bi-cup-straw"></i>Drinks<br>
+				<i class="bi bi-hourglass-split"></i>30min
+			</p>
+		</div>
+	</a>
+	<a href="#">
+		<img src="https://cdn.pixabay.com/photo/2015/04/10/00/41/food-715542_960_720.jpg">
+		<div class="restaurants-info">
+			<h3>Thai Heaven</h3>
+			<p>
+				<em class="badge bdg-blue">🇹🇭Thai</em><br>
+				<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></em><br>
+				<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>
+				<i class="bi bi-chevron-double-down"></i>Low Cal.<br>
+				<i class="bi bi-cup-straw"></i>Drinks<br>
+				<i class="bi bi-hourglass-split"></i>50min
+			</p>
+		</div>
+	</a>
+	<a href="#">
+		<img src="https://cdn.pixabay.com/photo/2018/05/01/18/35/bowl-3366480_960_720.jpg">
+		<div class="restaurants-info">
+			<h3>Pod Dubom</h3>
+			<p>
+				<em class="badge bdg-blue">🇸🇰Slovak</em><br>
+				<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></em><br>
+				<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>
+				<i class="bi bi-chevron-double-down"></i>Low Cal.<br>
+				<i class="bi bi-cup-straw"></i>Drinks<br>
+				<i class="bi bi-hourglass-split"></i>60min
+			</p>
+		</div>
+	</a>
+	</div>
 </div>
 
 {% endblock content %}

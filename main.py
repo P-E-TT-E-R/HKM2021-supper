@@ -7,13 +7,15 @@ app.secret_key = '7fbb7490f9d2571fc3ef5ac265220d167812157ff520ba29ca47f3a5c8e033
 
 @app.route('/')
 def index():
+   with open("restaurants.json") as file:
+      restaurants = json.load(file)
    for x in range(0,5):
       key = uuid.uuid4().hex
       if key not in orders:
          orders[key] = {
             "created": str(datetime.now()),
             "users": [],
-            "restaurants": [],
+            "restaurants": restaurants,
             "stage": 1,
             "votes": {
                "stage2": [],
