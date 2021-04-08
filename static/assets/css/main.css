@@ -276,3 +276,69 @@ nav .nav-top li a {
 	padding-bottom: 3em;
 	padding-top: 3em;
 }
+
+.result-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	font-family: 'Roboto', serif;
+	min-height: 95em;
+}
+.result-wrapper h1 {
+	font-size: 4em;
+	color: white;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	border-radius: 1.5em;
+	padding-bottom: 3em;
+}
+
+.result div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 92%;
+	height: 25em;
+	margin-top: 3em;
+	border-radius: 1.5em;
+	text-decoration: none;
+}
+
+.result div img { 
+	width: 40%;
+	border-radius: 1.5em;
+	max-height: 18em;
+}
+.result div .result-info {
+	font-family: 'Roboto', serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 2em;
+	color: #003049;
+	width: 50%;
+	height: 100%;
+}
+.result div .result-info h3 {
+	margin:0px;
+	margin-top: 0.1em;
+}
+.result div .result-info p {
+	columns: 2;
+	line-height: 2.2em;
+}
+.result div:hover {
+	filter: brightness(.9);
+	cursor: pointer;
+}
+
