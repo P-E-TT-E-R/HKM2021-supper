@@ -24,7 +24,7 @@ async function begin() {
 function updateUserlist() {
     var html = ""
     info['users'].forEach(function(user) {
-        html += `<h3><i class="bi bi-person-circle"></i>${user}</h3>`
+        html += `<h3 class="frosted"><i class="bi bi-person-circle"></i>${user}</h3>`
     })
     document.getElementById('list-users').innerHTML = ''
     document.getElementById('list-users').innerHTML = html
@@ -33,7 +33,7 @@ function getRestaurants() {
     var html = ""
     var details = ""
     for (let [key, value] of Object.entries(info['restaurants'])) {
-        html += `<a href="#">
+        html += `<div class="frosted">
 		<img src="${value['thumbnail_url']}">
 		<div class="restaurants-info">
 			<h3>${key}</h3>
@@ -46,7 +46,7 @@ function getRestaurants() {
 				<i class="bi bi-hourglass-split"></i>50min
 			</p>
 		</div>
-	</a>
+	</div>
 	`
     }
     document.getElementById('list-restaurants').innerHTML = ''
