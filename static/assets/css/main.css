@@ -232,13 +232,13 @@ nav .nav-top li a {
 	justify-content: space-around;
 	align-items: center;
 	width: 92%;
-	height: 25em;
-	margin-top: 3em;
+	height: 15em;
+	margin-top: 1em;
 	border-radius: 1.5em;
 	text-decoration: none;
 }
 .menu div img { 
-	width: 40%;
+	width: 25%;
 	border-radius: 1.5em;
 	max-height: 18em;
 }
@@ -249,16 +249,16 @@ nav .nav-top li a {
 	align-items: flex-start;
 	font-size: 2em;
 	color: #003049;
-	width: 50%;
+	width: 60%;
 	height: 100%;
 	display: flex;
+	margin-right: 30px;
 }
 .menu div .menu-info h3 {
 	margin:0px;
 	margin-top: 0.1em;
 }
 .menu div .menu-info p {
-	columns: 2;
 	line-height: 2.2em;
 }
 .menu div:hover {
