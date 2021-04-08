@@ -30,20 +30,35 @@ function updateUserlist() {
     document.getElementById('list-users').innerHTML = html
 }
 function getRestaurants() {
-    var html = ""
-    var details = ""
+    var html = "";
+    var stars = "";
+    var badges = "";
     for (let [key, value] of Object.entries(info['restaurants'])) {
+        html = "";
+        stars = "";
+        badges = "";
+
+        for (let i = 0; i < 5; i++) {
+            if (i <= value['stars']) {
+                stars += '<i class="bi bi-star-fill"></i>';
+            } else {
+                stars += '<i class="bi bi-star"></i>';
+            }
+        }
+
+        if (value['vegan_options'] === true) {
+            badges += '<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>'
+        }
         html += `<div class="frosted">
 		<img src="${value['thumbnail_url']}">
 		<div class="restaurants-info">
 			<h3>${key}</h3>
 			<p>
 				<em class="badge bdg-blue">${value['food_origin']}</em><br>
-				<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></em><br>
-				<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>
-				<i class="bi bi-chevron-double-down"></i>Low Cal.<br>
-				<i class="bi bi-cup-straw"></i>Drinks<br>
-				<i class="bi bi-hourglass-split"></i>50min
+				<em class="badge bdg-orange">${stars}</em><br>
+				${badges}<br>
+                <i class="bi bi-hourglass-split"></i>${value['delivery_time']}min<br>
+				${value['details_html']}
 			</p>
 		</div>
 	</div>
