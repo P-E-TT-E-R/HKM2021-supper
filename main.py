@@ -32,6 +32,10 @@ def index():
 def order():
    return render_template("main/order.html", key=session['key'])
 
+@app.route('/result')
+def result():
+   return render_template("main/result.html", key=session['key'])
+
 @app.route('/api/info/<id>')
 def apiInfo(id):
    return jsonify(orders[id])
