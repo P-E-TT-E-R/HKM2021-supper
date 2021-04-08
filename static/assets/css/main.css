@@ -103,6 +103,10 @@ nav .nav-top li a {
 .card button {
 	font-size: 2.5em;
 	}
+.card button:hover {
+	filter: brightness(.9);
+	cursor: pointer;
+}
 .list-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -161,6 +165,10 @@ nav .nav-top li a {
 	columns: 2;
 	line-height: 2.2em;
 }
+.restaurants a:hover {
+	filter: brightness(.9);
+	cursor: pointer;
+}
 .users h3 {
 	width: 80%;
 	padding: 1em;
@@ -169,6 +177,10 @@ nav .nav-top li a {
 	color: #003049;
 	font-size: 2em;
 	border-radius: 1.5em;
+}
+.users h3:hover {
+	filter: brightness(.9);
+	cursor: pointer;
 }
 .badge {
 	padding: 0.4em;
@@ -186,3 +198,57 @@ nav .nav-top li a {
 	background-color: #23B65E;
 	color: white;
 }
+
+.menu-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	font-family: 'Roboto', serif;
+	background-color: #003049;
+	min-height: 95em;
+}
+.menu-wrapper h1 {
+	font-size: 4em;
+	color: white;
+}
+.menu a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 92%;
+	height: 20em;
+	margin-top: 3em;
+	background-color: #FCBF49;
+	border-radius: 1.5em;
+	text-decoration: none;
+}
+.menu a img { 
+	width: 30%;
+	border-radius: 1.5em;
+	max-height: 18em;
+}
+.menu a .menu-info {
+	font-family: 'Roboto', serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 2em;
+	color: #003049;
+	width: 50%;
+	height: 100%;
+}
+.menu a .menu-info h3 {
+	margin:0px;
+	margin-top: 0.3em;
+}
+.menu a .menu-info p {
+	columns: 2;
+	line-height: 2.2em;
+}
+.menu a:hover {
+	filter: brightness(.9);
+	cursor: pointer;

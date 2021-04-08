@@ -27,6 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/main" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -61,7 +62,10 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5a1bac1c-df9a-4539-bdcd-8c910da94bda" name="Default Changelist" comment="" />
@@ -71,5 +75,31 @@
       <updated>1617563387517</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="936" height="282" key="GridCell.Tab.0.bottom" timestamp="1617887081355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617887081355" />
+    <state width="936" height="282" key="GridCell.Tab.0.center" timestamp="1617887081355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617887081355" />
+    <state width="936" height="282" key="GridCell.Tab.0.left" timestamp="1617887081355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617887081355" />
+    <state width="936" height="282" key="GridCell.Tab.0.right" timestamp="1617887081355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617887081355" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1617868717166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617868717166" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1617868681518">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617868681518" />
   </component>
 </project>
