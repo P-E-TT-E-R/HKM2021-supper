@@ -14,11 +14,27 @@ body {
 	margin-right: auto;
 	background-color: #003049;
 }
-.f-right {
-	float: right;
+.frosted {
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+
 }
-.f-left {
-	float: left;
+
+.frosted:before {
+	content: "";
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+	filter: blur(10px);
+	margin: -20px;
 }
 nav {
 	display: flex;
@@ -27,7 +43,6 @@ nav {
 	flex-direction: column;
 	justify-content: flex-start;
 	font-family: 'Kiwi Maru', serif;
-	background-color: #F77F00;
 	border-radius: 0em 0em 2em 2em;
 }
 nav ul {
@@ -41,7 +56,6 @@ nav ul {
 	margin: 0px;
 }
 nav .nav-top {
-	background-color: #D62828;
 	min-height: 8em;
 	border-radius: 0em 0em 2em 2em;
 }
@@ -99,10 +113,10 @@ nav .nav-top li a {
 .card input[type=text] {
 	width: 80%;
 	font-size: 3em;
-	}
+}
 .card button {
 	font-size: 2.5em;
-	}
+}
 .card button:hover {
 	filter: brightness(.9);
 	cursor: pointer;
@@ -185,7 +199,7 @@ nav .nav-top li a {
 .badge {
 	padding: 0.4em;
 	border-radius: 1.5em;
-	}
+}
 .bdg-blue {
 	background-color: #003049;
 	color: white;
@@ -252,3 +266,4 @@ nav .nav-top li a {
 .menu a:hover {
 	filter: brightness(.9);
 	cursor: pointer;
+}
