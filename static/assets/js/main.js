@@ -1,8 +1,12 @@
 var info;
 
 if (typeof key !== 'undefined') {
+    getInfo;
+    updateUserlist;
+
     setInterval(getInfo, 1500);
     setInterval(updateUserlist, 1500);
+    setTimeout(getRestaurants, 3000);
 }
 
 async function join() {
@@ -24,6 +28,29 @@ function updateUserlist() {
     })
     document.getElementById('list-users').innerHTML = ''
     document.getElementById('list-users').innerHTML = html
+}
+function getRestaurants() {
+    var html = ""
+    var details = ""
+    for (let [key, value] of Object.entries(info['restaurants'])) {
+        html += `<a href="#">
+		<img src="${value['thumbnail_url']}">
+		<div class="restaurants-info">
+			<h3>${key}</h3>
+			<p>
+				<em class="badge bdg-blue">${value['food_origin']}</em><br>
+				<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></em><br>
+				<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>
+				<i class="bi bi-chevron-double-down"></i>Low Cal.<br>
+				<i class="bi bi-cup-straw"></i>Drinks<br>
+				<i class="bi bi-hourglass-split"></i>50min
+			</p>
+		</div>
+	</a>
+	`
+    }
+    document.getElementById('list-restaurants').innerHTML = ''
+    document.getElementById('list-restaurants').innerHTML = html
 }
 async function getInfo () {
     info = await httpRequest('api/info/'+key);
