@@ -42,8 +42,8 @@ def index():
             # Creates join URL
             joinUrl = f"{hostname}/join/{key}"
 
-        # Returns rendered template with generated variables
-        return render_template("main/index.html", key=key, joinUrl=joinUrl)
+            # Returns rendered template with generated variables
+            return render_template("main/index.html", key=key, joinUrl=joinUrl)
 
 
 @app.route('/order')
