@@ -25,6 +25,6 @@
 
 ## Next steps
 
-*We sure still have a long way to go. There are still plenty of things we don't know. We sure have to start think ahead.
+*We sure still have a long way to go. There are still plenty of things we don't know. We sure have to start think ahead.*
 
 ## License
