@@ -1,18 +1,36 @@
 var info;
 
 if (typeof key !== 'undefined') {
-    getInfo();
-    setInterval(getInfo, 1500);
-
-    setTimeout(updateUserlist, 200);
-    setInterval(updateUserlist, 1500);
-
-    setTimeout(getRestaurants, 3000);
-    setTimeout(getFood, 3000);
+    updateAll();
+    setInterval(updateAll, 1000);
 }
 
 async function getInfo () {
     info = await httpRequest('api/info/'+key);
+}
+
+async function updateAll() {
+    var newinfo = await httpRequest('api/info/'+key);
+    if (newinfo != info) {
+        info = newinfo
+        updateUserlist();
+        updateRestaurants();
+        updateFood();
+
+        if (info['stage'] == 2) {
+            document.getElementById('list-users').style.display = "flex";
+            document.getElementById('list-restaurants').style.display = "none";
+            document.getElementById('list-menu').style.display = "none";
+        } else if (info['stage'] == 3) {
+            document.getElementById('list-users').style.display = "none";
+            document.getElementById('list-restaurants').style.display = "flex";
+            document.getElementById('list-menu').style.display = "none";
+        } else if (info['stage'] == 4) {
+            document.getElementById('list-users').style.display = "none";
+            document.getElementById('list-restaurants').style.display = "none";
+            document.getElementById('list-menu').style.display = "flex";
+        }
+    }
 }
 
 function updateUserlist() {
@@ -24,7 +42,7 @@ function updateUserlist() {
     document.getElementById('list-users').innerHTML = html;
 }
 
-function getRestaurants() {
+function updateRestaurants() {
     var html = "";
     var stars = "";
     var badges = "";
@@ -64,7 +82,7 @@ function getRestaurants() {
     document.getElementById('list-restaurants').innerHTML = html;
 }
 
-function getFood() {
+function updateFood() {
     var html = "";
     var stars = "";
     var menu = info['restaurants']["Pod Dubom"]['menu'];
@@ -109,6 +127,27 @@ async function join() {
     var nick = document.getElementById("username").value;
     console.log(await httpRequest('api/action/'+key+'?type=join&name='+nick));
     window.location.replace("/order");
+}
+
+async function pickedUser(user) {
+    if (info['stage'] == 2) {
+        console.log("Voted for "+user);
+        console.log(await httpRequest('api/action/'+key+'?stage=2&value='+user));
+    }
+}
+
+async function pickedRestaurant(restaurant) {
+    if (info['stage'] == 3) {
+        console.log("Voted for "+restaurant);
+        console.log(await httpRequest('api/action/'+key+'?stage=3&value='+restaurant));
+    }
+}
+
+async function pickedFood(food) {
+    if (info['stage'] == 4) {
+        console.log("Voted for "+food);
+        console.log(await httpRequest('api/action/'+key+'?stage=4&value='+food));
+    }
 }
 
 async function httpRequest(loc) {

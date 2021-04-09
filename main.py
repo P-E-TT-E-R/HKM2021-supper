@@ -18,9 +18,9 @@ def index():
             "restaurants": restaurants,
             "stage": 1,
             "votes": {
-               "stage2": [],
-               "stage3": [],
-               "stage4": []
+               "who": [],
+               "where": [],
+               "what": []
             }
          }
          session['key'] = key
@@ -54,9 +54,6 @@ def apiSubmit(id):
 
    if type == "start":
       orders[id]['stage'] = 2
-
-   if type == "voteuser":
-      name = request.args.get('name')
 
    if type == "vote":
       stage = request.args.get('stage')
