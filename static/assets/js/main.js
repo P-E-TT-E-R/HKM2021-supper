@@ -1,4 +1,14 @@
 //Updates user list
+adapt();
+function adapt() {
+    body = document.getElementsByTagName("body")[0];
+    if (body.clientHeight < window.innerHeight) {
+        body.style.minHeight = window.innerHeight + "px";
+    }
+    if (window.innerWidth > 1081) {
+        body.style.width= "70%";
+    }
+}
 function updateUserlist() {
     var html = "";
 
@@ -128,6 +138,17 @@ async function join() {
 
     //Redirects to new page
     window.location.replace("/order");
+}
+
+//Ends lobby and shows results
+async function ready() {
+    if (info['stage'] == 4) {
+        console.log("Ready");
+
+        //Votes for food in menu
+        //Sends ready signal
+        console.log(await httpRequest('api/action/'+key+'?type=vote&stage=4&value=ready'));
+    }
 }
 
 //Votes for user
