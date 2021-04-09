@@ -20,6 +20,9 @@
 
 http://pe-ho.eu:5000
 
+Or download repo and run it under python virtual enviroment, but dont forget to install Flask.
+-host in config is used in link generation as host, so if you have domain setup put your domain in there.
+
 ## Challenges and accomplishments
 *We learned a lot of things. We did a lot of mistakes too, but we are learning from our mistakes. This was our first collaboration on a project.*
 
