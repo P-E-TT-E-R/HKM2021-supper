@@ -18,13 +18,12 @@
 
 ## How to try
 
-*List any URLs relevant to demonstrating your prototype, e.g. a live url where judges can preview your app. Note that judges won't be able to setup anything in their computers.*
+http://pe-ho.eu:5000
 
 ## Challenges and accomplishments
-*We learned a lot of things. We did a lot of mistakes too, but we are learning from mistakes. It took lot of time but we are proud of everything we did and learned.*
+*We learned a lot of things. We did a lot of mistakes too, but we are learning from our mistakes. This was our first collaboration on a project.*
 
 ## Next steps
 
-*We sure still have a long way to go. There are still plenty of things we don't know. We sure have to start think ahead.*
+*We sure still have a long way to go. There are still plenty of things not finished in here. We would like to add config, fix bugs, and re-code some bad parts of our code that largely happened to lack of time in our hands.*
 
-## License
