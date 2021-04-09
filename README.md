@@ -5,8 +5,8 @@
 *M0nk3S*
 
 ### Team members
-
-- Martin D., 
+- Peter H.
+- Martin D.
 
 ## Description
 
