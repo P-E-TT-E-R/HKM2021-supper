@@ -18,6 +18,7 @@
 
 ## How to try
 WARNING: Mc Donald's restaurant doesn't work for some reason, also if you click on something you vote for it but there is no feedback except slight color change on click.
+
 http://cloud.pe-ho.eu:5000
 
 Or download repo and run it under python virtual enviroment, but dont forget to install Flask.
