@@ -95,7 +95,7 @@ nav .nav-top li a {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 30em;
+	height: 25em;
 	border-radius: 0em 0em 2em 2em;
 	font-family: 'Roboto', sans-serif;
 }
@@ -109,6 +109,7 @@ nav .nav-top li a {
 	border-radius: 0.5em;
 	background-color: white;
 	padding: 1em;
+	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
 .card input[type=text] {
@@ -184,6 +185,7 @@ nav .nav-top li a {
 	filter: brightness(.9);
 	cursor: pointer;
 }
+
 .users h3 {
 	width: 80%;
 	padding: 1em;
@@ -192,25 +194,35 @@ nav .nav-top li a {
 	font-size: 2em;
 	border-radius: 1.5em;
 }
+
 .users h3:hover {
 	filter: brightness(.9);
 	cursor: pointer;
 }
+
 .badge {
 	padding: 0.4em;
 	border-radius: 1.5em;
 }
+
 .bdg-blue {
 	background-color: #003049;
 	color: white;
 }
+
 .bdg-orange {
 	background-color: #F77F00;
 	color: white;
 }
+
 .bdg-green {
 	background-color: #23B65E;
 	color: white;
+}
+
+.menu {
+	padding-bottom: 3em;
+	padding-top: 3em;
 }
 
 .menu div {
@@ -251,17 +263,6 @@ nav .nav-top li a {
 .menu div:hover {
 	filter: brightness(.9);
 	cursor: pointer;
-}
-
-.menu {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	border-radius: 1.5em;
-	padding-bottom: 3em;
-	padding-top: 3em;
 }
 
 .result-wrapper {

@@ -1,48 +1,3 @@
-var info;
-
-//Updates lobby everything once in a while
-if (typeof key !== 'undefined') {
-    updateAll();
-    setInterval(updateAll, 1000);
-}
-
-//Updates everything if something changed
-async function updateAll() {
-    //Gets new lobby data
-    var newinfo = await httpRequest('api/info/'+key);
-
-    //If lobby data changed proceeds to update everything
-    if (newinfo != info) {
-        //Updates global data variable
-        info = newinfo
-
-        //Updates items in lists
-        updateUserlist();
-        updateRestaurants();
-        updateFood();
-
-        //Makes sure that displayed items correspond to the right stage in the process
-        if (info['stage'] == 2) {
-            document.getElementById('list-users').parentNode.style.display = "flex";
-            document.getElementById('list-restaurants').parentNode.style.display = "none";
-            document.getElementById('list-menu').parentNode.style.display = "none";
-            document.getElementById('title').innerHTML = "Vote who orders today";
-
-        } else if (info['stage'] == 3) {
-            document.getElementById('list-users').parentNode.style.display = "none";
-            document.getElementById('list-restaurants').parentNode.style.display = "flex";
-            document.getElementById('list-menu').parentNode.style.display = "none";
-            document.getElementById('title').innerHTML = "Vote for restaurant";
-
-        } else if (info['stage'] == 4) {
-            document.getElementById('list-users').parentNode.style.display = "none";
-            document.getElementById('list-restaurants').parentNode.style.display = "none";
-            document.getElementById('list-menu').parentNode.style.display = "flex";
-            document.getElementById('title').innerHTML = "Choose what you want to order";
-        }
-    }
-}
-
 //Updates user list
 function updateUserlist() {
     var html = "";
@@ -113,7 +68,7 @@ function updateRestaurants() {
 function updateFood() {
     var html = "";
     var stars = "";
-    var menu = info['restaurants']["Pod Dubom"]['menu'];
+    var menu = info['restaurants'][info['results']['stage3']]['menu'];
 
     //Creates html list of all restaurants
     for (let [key, value] of Object.entries(menu)) {

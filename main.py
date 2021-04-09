@@ -26,10 +26,16 @@ def index():
                 "users": [],
                 "restaurants": restaurants,
                 "stage": 1,
+                "voted": [],
                 "votes": {
-                    "stage2": [],
-                    "stage3": [],
-                    "stage4": []
+                    "stage2": {},
+                    "stage3": {},
+                    "stage4": {}
+                },
+                "results": {
+                    "stage2": "",
+                    "stage3": "",
+                    "stage4": ""
                 }
             }
 
@@ -89,12 +95,59 @@ def apiSubmit(id):
     if type == "vote":
         # Registers a vote
         stage = request.args.get('stage')
-        order['votes']['stage' + stage].append((session['name'], request.args.get('value')))
+        votes = order['votes']['stage' + str(stage)]
+        value = request.args.get('value')
 
-    # Checks if all users in lobby voted and if so, changes the stage of the lobby
-    if 'stage' + str(order['stage']) in order['votes']:
-        if len(order['users']) == len(order['votes']['stage' + str(order['stage'])]):
-            order['stage'] += 1
+        if session['name'] not in order['voted'] and order['stage'] != 4:
+            if value in votes:
+                order['votes']['stage' + str(stage)][value] = votes[value] + 1
+            else:
+                order['votes']['stage' + str(stage)][value] = 1
+
+            order['voted'].append(session['name'])
+        elif order['stage'] == 4:
+            if value == "ready" and session['name'] not in order['voted']:
+                if value in votes:
+                    order['votes']['stage' + str(stage)][value] = votes[value] + 1
+                else:
+                    order['votes']['stage' + str(stage)][value] = 1
+
+                order['voted'].append(session['name'])
+
+            elif value != "ready":
+                if value in votes:
+                    order['votes']['stage' + str(stage)][value] = votes[value] + 1
+                else:
+                    order['votes']['stage' + str(stage)][value] = 1
+
+
+    # Checks if all users in lobby voted and if so, changes the stage of the lobby and saves result
+    stage = 'stage' + str(order['stage'])
+    if stage in order['votes']:
+
+        votesCombined = 0
+        for vote in order['votes'][stage]:
+            votesCombined += order['votes'][stage][vote]
+
+        if len(order['users']) <= votesCombined:
+            votes = order['votes'][stage]
+
+            if order['stage'] == 4:
+                if 'ready' in votes:
+                    if votes['ready'] == len(order['users']):
+                        votes.pop('ready')
+                        order['results'][stage] = votes
+                        order['stage'] += 1
+                        order['voted'] = []
+
+            else:
+                result = ("",0)
+                for vote in votes:
+                    if votes[vote] > result[1]:
+                        result = (vote, votes[vote])
+                order['results'][stage] = result[0]
+                order['stage'] += 1
+                order['voted'] = []
 
     # If everything wnt correctly, returns "Delivered Successfully"
     return "Delivered Successfully"

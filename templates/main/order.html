@@ -8,9 +8,11 @@
 <script>
 	var key = '{{ key }}';
 </script>
+<script src="{{ url_for('static', filename = '/assets/js/order.js') }}"></script>
 
 <div class="card">
 	<label id="title">Waiting for host</label>
+	<button id="ready-btn" type="button" onclick="ready(key);">Ready <i class="bi bi-play"></i></button>
 </div>
 
 <div class="list-wrapper">

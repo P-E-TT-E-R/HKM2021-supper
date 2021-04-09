@@ -8,43 +8,30 @@
 <script>
 	var key = '{{ key }}';
 </script>
+<script src="{{ url_for('static', filename = '/assets/js/result.js') }}"></script>
 
 <div class="card">
-	<label id="title">Waiting for host</label>
+	<label id="title">Results</label>
+</div>
+<div class="list-wrapper">
+	<h1>Today orders:</h1>
+	<div id="list-users" class="list users frosted">
+		<!--Here will be user-->
+	</div>
 </div>
 <div class="result-wrapper">
-	<h1>Restaurant</h1>
+	<h1>From:</h1>
 	<div id="list-restaurants" class="list result frosted">
-		<div class="frosted">
-		<img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg">
-			<div class="result-info">
-				<h3>MC Donald's</h3>
-				<p>
-					<em class="badge bdg-blue">🇺🇸American</em><br>
-					<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i class="bi bi-star"></i><i class="bi bi-star"></i></em><br>
-					<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>
-					<i class="bi bi-chevron-double-up"></i>High Cal.<br>
-					<i class="bi bi-cup-straw"></i>Drinks<br>
-					<i class="bi bi-hourglass-split"></i>30min
-				</p>
-			</div>
-		</div>
+		<!--Here will be restaurant-->
 	</div>
+</div>
 <div class="result-wrapper">
-	<h1>Menu</h1>
-	<div id="list-restaurants" class="list result frosted">
-		<div class="frosted">
-		<img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg">
-		<div class="result-info">
-			<h3>Big Mac</h3>
-			<p>
-				<em class="badge bdg-orange"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i class="bi bi-star"></i><i class="bi bi-star"></i></em>
-				<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em>
-				<i class="bi bi-chevron-double-up" style="margin-left: 10px;"></i>High Cal.
-			</p>
-		</div>
+	<h1>All items:</h1>
+	<div id="list-menu" class="list result frosted">
+		<!--Here will be ordered items from menu-->
 	</div>
 
 {% endblock content %}
 
-{% block javascript %}{% endblock javascript %}
+{% block javascript %}
+{% endblock javascript %}
