@@ -17,7 +17,7 @@
 *The project is still in prototype. We we're able to implement all mayor features. Users are able to share a link with their friends or team and vote who orders, from which restaurant the person orders and choose what they want to eat. In the future we would like to implement discord bot and app for smartphones that could speed up the process and make it more straight-forward. Also it would be helpfull if we would be able to add API of any major food delivery service becouse it would make the whole process much easier.*
 
 ## How to try
-
+WARNING: Mc Donald's restaurant doesn't work for some reason, also if you click on something you vote for it but there is no feedback except slight color change on click.
 http://cloud.pe-ho.eu:5000
 
 Or download repo and run it under python virtual enviroment, but dont forget to install Flask.
