@@ -18,7 +18,7 @@
 
 ## How to try
 
-http://pe-ho.eu:5000
+http://cloud.pe-ho.eu:5000
 
 Or download repo and run it under python virtual enviroment, but dont forget to install Flask.
 -host in config is used in link generation as host, so if you have domain setup put your domain in there.
