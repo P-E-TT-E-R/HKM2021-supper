@@ -18,14 +18,14 @@ def index():
             "restaurants": restaurants,
             "stage": 1,
             "votes": {
-               "who": [],
-               "where": [],
-               "what": []
+               "stage2": [],
+               "stage3": [],
+               "stage4": []
             }
          }
          session['key'] = key
          hostname = "127.0.0.1:8000"
-         joinUrl = f"{hostname}/api/join/{key}"
+         joinUrl = f"{hostname}/join/{key}"
          return render_template("main/index.html",key=key,joinUrl=joinUrl)
 
 @app.route('/order')
@@ -40,24 +40,31 @@ def result():
 def apiInfo(id):
    return jsonify(orders[id])
 
-@app.route('/api/join/<id>')
-def apiJoin(id,name = ''):
+@app.route('/join/<id>')
+def join(id,name = ''):
    return render_template("main/join.html", key=id)
 
 @app.route('/api/action/<id>',methods=['GET'])
 def apiSubmit(id):
    type = request.args.get('type')
+   order = orders[id]
+
    if type == "join":
       name = request.args.get('name')
       session['name'] = name
-      orders[id]['users'].append(name)
+      session['key'] = id
+      order['users'].append(name)
 
    if type == "start":
-      orders[id]['stage'] = 2
+      order['stage'] = 2
 
    if type == "vote":
       stage = request.args.get('stage')
-      orders[id]['votes'][stage].append((session['name'], request.args.get('value')))
+      order['votes']['stage'+stage].append((session['name'], request.args.get('value')))
+
+   if 'stage' + str(order['stage']) in order['votes']:
+      if len(order['users']) == len(order['votes']['stage' + str(order['stage'])]):
+         order['stage'] += 1
 
    return "Delivered Successfully"
 
