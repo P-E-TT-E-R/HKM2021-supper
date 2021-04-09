@@ -9,17 +9,15 @@
 	var key = '{{ key }}';
 </script>
 <script src="{{ url_for('static', filename = '/assets/js/index.js') }}"></script>
-<div id="stage1">
-	<div class="card">
-		<label for="address">Join url</label><br>
-		<input type="text" id="adress" name="address" placeholder="Generating..." value="{{ joinUrl }}"><br>
-		<button type="button" onclick="begin(key);">Begin <i class="bi bi-play"></i></button>
-	</div>
-	<div class="list-wrapper">
-		<h1>Joined users</h1>
-		<div id="list-users" class="list users">
-			<!--Here will be users when they join ;P-->
-		</div>
+<div class="card">
+	<label for="address">Join url</label><br>
+	<input type="text" id="adress" name="address" placeholder="Generating..." value="{{ joinUrl }}"><br>
+	<button type="button" onclick="begin(key);">Begin <i class="bi bi-play"></i></button>
+</div>
+<div class="list-wrapper">
+	<h1>Joined users</h1>
+	<div id="list-users" class="list users">
+		<!--Here will be users when they join ;P-->
 	</div>
 </div>
 
