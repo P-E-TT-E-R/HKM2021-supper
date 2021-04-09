@@ -42,11 +42,8 @@ def index():
             # Adds new session var
             session['key'] = key
 
-            # This should be moved to config.json or replaced by smth
-            hostname = "127.0.0.1:8000"
-
             # Creates join URL
-            joinUrl = f"{hostname}/join/{key}"
+            joinUrl = f"{config['host']}/join/{key}"
 
             # Returns rendered template with generated variables
             return render_template("main/index.html", key=key, joinUrl=joinUrl)
@@ -156,5 +153,9 @@ if __name__ == '__main__':
     # Declares global variable orders where all orders (lobbies) are stored
     orders = {}
 
+    # Loads config
+    with open("config.json") as file:
+        config = json.load(file)
+
     # Starts the app
-    app.run('0.0.0.0', 8000)
+    app.run(config['ip'], config['port'])
