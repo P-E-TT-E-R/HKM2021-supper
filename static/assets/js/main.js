@@ -18,17 +18,20 @@ async function updateAll() {
         updateFood();
 
         if (info['stage'] == 2) {
-            document.getElementById('list-users').style.display = "flex";
-            document.getElementById('list-restaurants').style.display = "none";
-            document.getElementById('list-menu').style.display = "none";
+            document.getElementById('list-users').parentNode.style.display = "flex";
+            document.getElementById('list-restaurants').parentNode.style.display = "none";
+            document.getElementById('list-menu').parentNode.style.display = "none";
+            document.getElementById('title').innerHTML = "Vote who orders today";
         } else if (info['stage'] == 3) {
-            document.getElementById('list-users').style.display = "none";
-            document.getElementById('list-restaurants').style.display = "flex";
-            document.getElementById('list-menu').style.display = "none";
+            document.getElementById('list-users').parentNode.style.display = "none";
+            document.getElementById('list-restaurants').parentNode.style.display = "flex";
+            document.getElementById('list-menu').parentNode.style.display = "none";
+            document.getElementById('title').innerHTML = "Vote for restaurant";
         } else if (info['stage'] == 4) {
-            document.getElementById('list-users').style.display = "none";
-            document.getElementById('list-restaurants').style.display = "none";
-            document.getElementById('list-menu').style.display = "flex";
+            document.getElementById('list-users').parentNode.style.display = "none";
+            document.getElementById('list-restaurants').parentNode.style.display = "none";
+            document.getElementById('list-menu').parentNode.style.display = "flex";
+            document.getElementById('title').innerHTML = "Choose what you want to order";
         }
     }
 }
@@ -36,7 +39,7 @@ async function updateAll() {
 function updateUserlist() {
     var html = "";
     info['users'].forEach(function(user) {
-        html += `<h3 class="frosted" onclick="pickedUser(${user});"><i class="bi bi-person-circle"></i>${user}</h3>`
+        html += `<h3 class="frosted" onclick="pickedUser('${user}');"><i class="bi bi-person-circle"></i>${user}</h3>`
     });
     document.getElementById('list-users').innerHTML = '';
     document.getElementById('list-users').innerHTML = html;
@@ -63,7 +66,7 @@ function updateRestaurants() {
             badges += '<em class="badge bdg-green"><i class="bi bi-flower1"></i>Vegan </em><br>';
         }
         html += `
-        <div class="frosted" onclick="pickedRestaurant(${key});">
+        <div class="frosted" onclick="pickedRestaurant('${key}');">
 		<img src="${value['thumbnail_url']}">
 		<div class="restaurants-info">
 			<h3>${key}</h3>
@@ -98,7 +101,7 @@ function updateFood() {
             }
         }
 
-        html += `<div class="frosted" onclick="pickedFood(${key});">
+        html += `<div class="frosted" onclick="pickedFood('${key}');">
                     <img src="${value['thumbnail_url']}">
                     <div class="menu-info">
                         <h3>${key}</h3>
@@ -111,8 +114,8 @@ function updateFood() {
     `;
     }
 
-    document.getElementById('list-food').innerHTML = '';
-    document.getElementById('list-food').innerHTML = html;
+    document.getElementById('list-menu').innerHTML = '';
+    document.getElementById('list-menu').innerHTML = html;
 }
 
 async function begin() {
@@ -132,21 +135,21 @@ async function join() {
 async function pickedUser(user) {
     if (info['stage'] == 2) {
         console.log("Voted for "+user);
-        console.log(await httpRequest('api/action/'+key+'?stage=2&value='+user));
+        console.log(await httpRequest('api/action/'+key+'?type=vote&stage=2&value='+user));
     }
 }
 
 async function pickedRestaurant(restaurant) {
     if (info['stage'] == 3) {
         console.log("Voted for "+restaurant);
-        console.log(await httpRequest('api/action/'+key+'?stage=3&value='+restaurant));
+        console.log(await httpRequest('api/action/'+key+'?type=vote&stage=3&value='+restaurant));
     }
 }
 
 async function pickedFood(food) {
     if (info['stage'] == 4) {
         console.log("Voted for "+food);
-        console.log(await httpRequest('api/action/'+key+'?stage=4&value='+food));
+        console.log(await httpRequest('api/action/'+key+'?type=vote&stage=4&value='+food));
     }
 }
 
