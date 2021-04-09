@@ -4,28 +4,28 @@
     "food_origin": "\uD83C\uDDFA\uD83C\uDDF8American",
     "stars": 3,
     "vegan_options": true,
-    "delivery_time":30,
+    "delivery_time": 30,
     "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal.<br>\n\t\t\t\t<i class=\"bi bi-cup-straw\"></i>Drinks<br>",
     "menu": {
       "Cheese Burger": {
         "thumbnail_url": "https://www.foodrepublic.com/wp-content/uploads/2016/06/132_Husk-Cheeseburger-edit.jpg",
         "stars": 3,
-        "details_html":"<i class=\"bi bi-chevron-double-up\"></i>High Cal."
+        "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal."
       },
       "Big Mac": {
         "thumbnail_url": "http://www.bhg.com.au/media/26123/big-mac.jpg",
         "stars": 4,
-        "details_html":"<i class=\"bi bi-chevron-double-up\"></i>High Cal."
+        "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal."
       },
       "Mc Flurry": {
         "thumbnail_url": "https://i.pinimg.com/736x/5e/08/ea/5e08ea3a5e50183cea067b159db5a5e7--mcflurry-flavors-switzerland.jpg",
         "stars": 5,
-        "details_html":"<i class=\"bi bi-chevron-double-up\"></i>High Cal."
+        "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal."
       },
       "Cola": {
         "thumbnail_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.shortlist.com%2Fmedia%2Fimager%2F201905%2F27334-posts.article_md.jpg&f=1&nofb=1",
         "stars": 2,
-        "details_html":"<em class=\"badge bdg-green\"><i class=\"bi bi-flower1\"></i>Vegan </em>"
+        "details_html": "<em class=\"badge bdg-green\"><i class=\"bi bi-flower1\"></i>Vegan </em>"
       }
     }
   },
@@ -34,28 +34,58 @@
     "food_origin": "\uD83C\uDDF9\uD83C\uDDEDThai",
     "stars": 5,
     "vegan_options": true,
-    "delivery_time":45,
+    "delivery_time": 45,
     "details_html": "<i class=\"bi bi-chevron-double-down\"></i>Low Cal.<br>\n\t\t\t\t<i class=\"bi bi-cup-straw\"></i>Drinks<br>",
     "menu": {
       "Khao Man Gai Thai kura a ryza": {
         "thumbnail_url": "https://cdn.pixabay.com/photo/2017/12/04/02/49/thai-basil-2996229_960_720.jpg",
         "stars": 3,
-        "details_html":"<i class=\"bi bi-chevron-double-down\"></i>Low Cal."
+        "details_html": "<i class=\"bi bi-chevron-double-down\"></i>Low Cal."
       },
       "Yam Taeng ": {
         "thumbnail_url": "https://cdn.pixabay.com/photo/2017/12/16/17/46/fried-rice-3023040_960_720.jpg",
         "stars": 4,
-        "details_html":"<em class=\"badge bdg-green\"><i class=\"bi bi-flower1\"></i>Vegan </em>"
+        "details_html": "<em class=\"badge bdg-green\"><i class=\"bi bi-flower1\"></i>Vegan </em>"
       },
       "Goong Tod Kratiem Prik Thai ": {
         "thumbnail_url": "https://cdn.pixabay.com/photo/2016/10/13/05/16/thai-curry-1736806_960_720.jpg",
         "stars": 5,
-        "details_html":"<i class=\"bi bi-chevron-double-down\"></i>Low Cal."
+        "details_html": "<i class=\"bi bi-chevron-double-down\"></i>Low Cal."
       },
       "Tea": {
         "thumbnail_url": "https://cdn.pixabay.com/photo/2015/07/02/20/37/cup-829527_960_720.jpg",
         "stars": 4,
-        "details_html":"<em class=\"badge bdg-green\"><i class=\"bi bi-flower1\"></i>Vegan </em>"
+        "details_html": "<em class=\"badge bdg-green\"><i class=\"bi bi-flower1\"></i>Vegan </em>"
+      }
+    }
+  },
+  "Pod Dubom": {
+    "thumbnail_url": "https://cdn.pixabay.com/photo/2017/03/27/11/59/abandoned-2178250_960_720.jpg",
+    "food_origin": "\uD83C\uDDF8\uD83C\uDDF0Slovak",
+    "stars": 4,
+    "vegan_options": true,
+    "delivery_time": 45,
+    "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal.<br>\n\t\t\t\t<i class=\"bi bi-cup-straw\"></i>Drinks<br>",
+    "menu": {
+      "Halušky s bryndzou": {
+        "thumbnail_url": "https://cdn.pixabay.com/photo/2016/05/03/14/00/bryndza-1369254_960_720.jpg",
+        "stars": 4,
+        "details_html": "<i class=\"bi bi-chevron-double-down\"></i>Low Cal. <em class=\\\"badge bdg-green\\\"><i class=\\\"bi bi-flower1\\\"></i>Vegan </em>"
+      },
+      "Gulášová polievka": {
+        "thumbnail_url": "https://cdn.pixabay.com/photo/2019/02/22/23/50/goulash-4014661_960_720.jpg",
+        "stars": 4,
+        "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal."
+      },
+      "Zemiakové placky": {
+        "thumbnail_url": "https://cdn.pixabay.com/photo/2014/11/24/22/35/potato-pancakes-544701_960_720.jpg",
+        "stars": 3,
+        "details_html": "<i class=\"bi bi-chevron-double-down\"></i>Low Cal. <em class=\\\"badge bdg-green\\\"><i class=\\\"bi bi-flower1\\\"></i>Vegan </em>"
+      },
+      "Pepsi": {
+        "thumbnail_url": "https://cdn.pixabay.com/photo/2020/05/10/05/14/pepsi-5152332_960_720.jpg",
+        "stars": 5,
+        "details_html": "<i class=\"bi bi-chevron-double-up\"></i>High Cal."
       }
     }
   }

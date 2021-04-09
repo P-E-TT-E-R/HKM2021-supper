@@ -67,7 +67,7 @@ function getRestaurants() {
 function getFood() {
     var html = "";
     var stars = "";
-    var menu = info['restaurants']["Mc Donald's"]['menu'];
+    var menu = info['restaurants']["Pod Dubom"]['menu'];
 
     for (let [key, value] of Object.entries(menu)) {
         stars = "";
