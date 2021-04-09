@@ -5,8 +5,8 @@
 *M0nk3S*
 
 ### Team members
-- Peter H.
-- Martin D.
+- Peter H. Secondary school of electrotechnical engineering Košice (SPSEKE)
+- Martin D. Secondary school of electrotechnical engineering Košice (SPSEKE)
 
 ## Description
 
@@ -20,18 +20,11 @@
 
 *List any URLs relevant to demonstrating your prototype, e.g. a live url where judges can preview your app. Note that judges won't be able to setup anything in their computers.*
 
-## Presentation
-
-*List any links to your presentation or additional materials that you want to share with the judges.*
-
 ## Challenges and accomplishments
-
-*Is there anything unexpected that you learned over the course of this project?*
-
-*Is there something your team is particularly proud of, related to this project?*
+*We learned a lot of things. We did a lot of mistakes too, but we are learning from mistakes. It took lot of time but we are proud of everything we did and learned.*
 
 ## Next steps
 
-*What do you need to do next to turn this prototype into a working solution?*
+*We sure still have a long way to go. There are still plenty of things we don't know. We sure have to start think ahead.*
 
 ## License
