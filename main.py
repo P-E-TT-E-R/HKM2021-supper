@@ -55,6 +55,9 @@ def apiSubmit(id):
    if type == "start":
       orders[id]['stage'] = 2
 
+   if type == "voteuser":
+      name = request.args.get('name')
+
    if type == "vote":
       stage = request.args.get('stage')
       orders[id]['votes'][stage].append((session['name'], request.args.get('value')))

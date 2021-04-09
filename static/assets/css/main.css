@@ -129,7 +129,7 @@ nav .nav-top li a {
 	align-items: center;
 	width: 100%;
 	font-family: 'Roboto', serif;
-	min-height: 95em;
+	min-height: 10em;
 }
 .list-wrapper h1 {
 	font-size: 4em;
@@ -213,19 +213,6 @@ nav .nav-top li a {
 	color: white;
 }
 
-.menu-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	font-family: 'Roboto', serif;
-	min-height: 95em;
-}
-.menu-wrapper h1 {
-	font-size: 4em;
-	color: white;
-}
 .menu div {
 	display: flex;
 	flex-direction: row;
