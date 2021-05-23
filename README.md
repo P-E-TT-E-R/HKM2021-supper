@@ -19,7 +19,7 @@
 ## How to try
 WARNING: Mc Donald's restaurant doesn't work for some reason, also if you click on something you vote for it but there is no feedback except slight color change on click.
 
-http://cloud.pe-ho.eu:5000
+http://cloud.pe-ho.eu:5000 - the link is temporarily unavailable
 
 Or download repo and run it under python virtual enviroment, but dont forget to install Flask.
 -host in config is used in link generation as host, so if you have domain setup put your domain in there.
